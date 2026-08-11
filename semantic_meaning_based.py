@@ -5,8 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 text_splitter = SemanticChunker(
-    OpenAIEmbeddings(), breakpoint_threshold_type="standard_deviation",
-    breakpoint_threshold_amount=3
+    OpenAIEmbeddings(),
+    breakpoint_threshold_type="standard_deviation",
+    breakpoint_threshold_amount=1
 )
 
 sample = """
